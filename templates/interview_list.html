@@ -1,0 +1,60 @@
+{% extends "layout.html" %}
+{% set active_page = "interview_list" %}
+{% block styles %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/interview_list.css') }}">
+{% endblock %}
+{% block content %}
+<div>
+    {% if job_list %}
+    <div>
+        For Today
+    </div>
+    {% for job in job_list %}
+    <div class="container">
+        <div class="ag-format-container">
+            <div class="ag-courses_box">
+                <div class="ag-courses_item">
+                    <a href="/interview/{{job['_id']}}" class="ag-courses-item_link">
+                        <div class="ag-courses-item_bg"></div>
+                        <div class="ag-courses-item_title">
+                            {{ job['position'] }}
+                        </div>
+                        <div class="ag-courses-item_subtitle">
+                            {{ job['salary'] }} LPA
+                        </div>
+    
+                        <!-- <div class="ag-courses-item_date-box">
+                                                Start:
+                                                <span class="ag-courses-item_date">
+                                                    04.11.2022
+                                                </span>
+                                            </div> -->
+                        <div class="ag-courses-item_date-box">
+                            Start Date:
+                            <span class="ag-courses-item_date">
+                                {{ job['date'] }}
+                            </span>
+                        </div>
+                        <div class="ag-courses-item_date-box">
+                            Last Date:
+                            <span class="ag-courses-item_date">
+                                {{ job['last_date'] }}
+                            </span>
+                        </div>
+                        <div class="ag-courses-item_date-box">
+                            Company:
+                            <span class="ag-courses-item_date">
+                                {{ job['company_name'] }}
+                            </span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+    {% else %}
+    <div>No Job is Available at this time</div>
+    {% endif %}
+</div>
+{% endblock content %}
