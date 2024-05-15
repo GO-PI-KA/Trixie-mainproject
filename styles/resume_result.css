@@ -1,0 +1,115 @@
+.top {
+    width: 50%;
+}
+
+.heading {
+    margin-top: 5%;
+    font-family: PoppinsBold;
+    font-size: 60px;
+    color: white;
+    text-align: left;
+}
+
+.sub-heading {
+    font-family: PoppinsLight;
+    font-size: 30px;
+}
+
+.circular-chart.orange {
+    color: orange;
+    text-align: center;
+}
+
+.single-chart-1 {
+    margin: 20px;
+    width: 15%;
+    justify-content: space-around;
+}
+
+.circle-bg {
+    fill: none;
+    stroke: #eee;
+    stroke-width: 3.8;
+}
+
+.circle {
+    margin-top: 80px;
+    position: relative;
+    fill: none;
+    stroke-width: 2.8;
+    stroke-linecap: round;
+    animation: progress 1s ease-out forwards;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100% - 700px);
+}
+
+.percentage {
+    fill: white;
+    font-size: 0.4em;
+    text-anchor: middle;
+}
+
+@keyframes progress {
+    0% {
+        stroke-dasharray: 0 100;
+    }
+}
+
+.circular-chart.orange .circle {
+    stroke: #FF8117;
+    display: block;
+
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+[class|=confetti] {
+    position: absolute;
+}
+
+.red {
+    background-color: #d13447;
+}
+
+.yellow {
+    background-color: #ffbf00;
+}
+
+.blue {
+    background-color: #263672;
+}
+
+.middle-text {
+    margin-top: 60px;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.bottom-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 100px;
+    width: 100%;
+    margin-bottom: 150px;
+}
+
+.sub-text {
+    width: 50%;
+}
+
+.sub-heading-2 {
+    font-family: Poppins;
+    font-size: 30px;
+}
+
+.picture-frame {
+}
